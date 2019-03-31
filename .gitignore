@@ -1,0 +1,11 @@
+
+\.DS_Store
+
+node_modules/
+Backend/Data/
+
+UI/build/
+
+UI/public/favicon\.ico
+
+\.idea/workspace\.xml
