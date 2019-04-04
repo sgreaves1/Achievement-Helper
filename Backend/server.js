@@ -18,4 +18,4 @@ app.use('/', indexRoute);
 
 app.use('/steam', steamRoute);
 
-app.listen(port, '0.0.0.0', () => console.log('server listening on http://localhost:', port));
+app.listen(port, '0.0.0.0', () => console.log('server listening on http://localhost:' + port));
