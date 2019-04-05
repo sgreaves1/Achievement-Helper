@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const HttpStatus = require('literal-http-status');
-const steamAPI = require('../data/steamAPI');
+const steamAPI = require('../API/steamAPI');
 
 router.get('/profile', async function (request, response) {
     response.status(HttpStatus['OK']).send(await steamAPI.getSteamProfile());
