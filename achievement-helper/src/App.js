@@ -12,17 +12,14 @@ class App extends Component {
     }
 
     componentDidMount() {
-        //this.getXboxProfile();
+        this.getXboxProfile();
         this.getSteamProfile();
     }
 
     getXboxProfile() {
-      fetch('https://xboxapi.com/v2/xxxx/profile', {
-        method: 'get',
-          headers: new Headers({
-              'X-AUTH': 'xxxx'
-          })
-      }).then(res => res.json()).then(json => {this.setState({xboxProfile: json})});
+        fetch('xbox/profile')
+            .then(res => res.json())
+            .then(json => {this.setState({xboxProfile: json})});
     }
 
     getSteamProfile() {
