@@ -1,0 +1,22 @@
+.xbox-gamercard {
+    color: white;
+    border: 1px solid red;
+    float: left;
+    width: 15%;
+    height: 20%;
+}
+
+.xbox-gamerpic {
+    border: 2px solid green;
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-top: 5px;
+}
+
+.xbox-info {
+    border: 2px solid green;
+    margin-left: 50%;
+    height: 100%;
+    padding-top: 15px;
+}
