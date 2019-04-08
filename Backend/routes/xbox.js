@@ -7,4 +7,8 @@ router.get('/profile', async function (request, response) {
    response.status(HttpStatus['OK']).json(await xboxAPI.getXboxProfile());
 });
 
+router.get('/gamercard', async function (request, response) {
+    response.status(HttpStatus['OK']).json(await xboxAPI.getXboxGamercard());
+});
+
 module.exports = router;
