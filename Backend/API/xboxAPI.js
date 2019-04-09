@@ -6,6 +6,7 @@ let auth = 'xxxx';
 let url = 'https://xboxapi.com/v2/';
 let getProfiles = '/profile';
 let getGamercard = '/gamercard';
+let getPresence = '/presence';
 
 
 async function getXboxProfile() {
@@ -31,4 +32,15 @@ async function getXboxGamercard() {
     return JSON.parse(await requestPromise(options))
 }
 
-module.exports = {getXboxProfile, getXboxGamercard}
+async function getXboxPresence() {
+    let options = {
+        uri: url + xboxUid + getPresence,
+        headers: {
+            'X-AUTH': auth
+        }
+    };
+
+    return JSON.parse(await requestPromise(options))
+}
+
+module.exports = {getXboxProfile, getXboxGamercard, getXboxPresence}

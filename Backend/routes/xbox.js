@@ -11,4 +11,8 @@ router.get('/gamercard', async function (request, response) {
     response.status(HttpStatus['OK']).json(await xboxAPI.getXboxGamercard());
 });
 
+router.get('/presence', async function (request, response) {
+    response.status(HttpStatus['OK']).json(await xboxAPI.getXboxPresence());
+});
+
 module.exports = router;
