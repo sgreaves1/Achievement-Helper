@@ -8,6 +8,7 @@ class App extends Component {
         this.state = {
             xboxProfile: {},
             xboxGamercard: {},
+            xboxPresence: {},
             steamProfile: {}
         };
     }
@@ -15,6 +16,7 @@ class App extends Component {
     componentDidMount() {
         this.getXboxProfile();
         this.getXboxGamercard();
+        this.getXboxPresence();
         this.getSteamProfile();
     }
 
@@ -62,7 +64,25 @@ class App extends Component {
                 "gamerpicSmallSslImagePath": "https://avatar-ssl.xboxlive.com/avatar/Samgplay/avatarpic-s.png",
                 "gamerpicLargeSslImagePath": "https://avatar-ssl.xboxlive.com/avatar/Samgplay/avatarpic-l.png",
                 "avatarManifest": "AAAAAAAAAAAAAAAAABAAAAMcAAPByPEJoZyy4AAIAAADLQADwcjxCaGcsuAAIAAAAzgAA8HI8QmhnLLgAACAAALqAAPByPEJoZyy4D+AAAAAAAAAAAAAAAAAAAAAACAAAqIAA8HI8QmhnLLgAAAAAAAAAAAAAAAAAAAAAAAAQAACbwADwcjxCaGcsuAAAAAAAAAAAAAAAAAAAAAAAAEAAALWAAHByPEJoZyy4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+Opdv8NDQ3/78KL/3J/Nf8NDQ3/blCk/w0NDf9mvNz/ZrzcAAAAAgAAAAHByPEJoZyy4AACAAAAAAAAAAAAAAAAAAAAAAABAAIAA8HI8QmhnLLgAAEAAAAAAAAAAAAAAAAAAAAAAAQBzgADwcjxCaGcsuAABAAAAAAAAAAAAAAAAAAAAAABAADMAAHByPEJoZyy4AEAAAAAAAAAAAAAAAAAAAAAAAAgADQAAcHI8QmhnLLgACAAAAAAAAAAAAAAAAAAAAAAEAAAAZHjzbkHeUVBCNQQAAAAAAAAAAAAAAAAAAAAAAAACABgAAHByPEJoZyy4AAIAAAAAAAAAAAAAAAAAAAAAAIAANwAAcHI8QmhnLLgAgAAAAAAAAAAAAAAAAAAAAAAABBs2gKhxJNV+VhYCDYAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA0AAHByPEJoZyy4AAgAAAAAAAAAAAAAAAAAAAAAAAQAKkAAcHI8QmhnLLgABAAAAAAAAAAAAAAAAAAAAAAAAgAYAABwcjxCaGcsuAACAAAAAAAAAAAAAAAAAAAAAAABAHOAAPByPEJoZyy4AAEAAAAAAAAAAAAAAAAAADgAADk+spUbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
-            }})
+            }});
+    }
+
+    getXboxPresence() {
+        // fetch('xbox/presence')
+        //     .then(res => res.json())
+        //     .then(json => {this.setState({xboxPresence: json})});
+
+        this.setState({xboxPresence:
+                {
+                    "xuid": 2533274811841399,
+                    "state": "Offline",
+                    "lastSeen": {
+                        "deviceType": "XboxOne",
+                        "titleId": 750323071,
+                        "titleName": "Home",
+                        "timestamp": "2019-04-07T16:35:34.7272491Z"
+                    }
+                }});
     }
 
     getSteamProfile() {
@@ -94,7 +114,7 @@ class App extends Component {
     render() {
       return (
         <div className="App">
-          <Header xboxProfile={this.state.xboxProfile} xboxGamercard={this.state.xboxGamercard} steamProfile={this.state.steamProfile}/>
+          <Header xboxProfile={this.state.xboxProfile} xboxGamercard={this.state.xboxGamercard} xboxPresence={this.state.xboxPresence} steamProfile={this.state.steamProfile}/>
             <body>
             </body>
         </div>
