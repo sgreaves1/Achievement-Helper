@@ -44,7 +44,7 @@ async function getXboxPresence() {
     return JSON.parse(await requestPromise(options))
 }
 
-async function getTitleHistory() {
+async function getXboxTitleHistory() {
     let options = {
         uri: url + xboxUid + getTitleHistory,
         headers: {
@@ -55,4 +55,4 @@ async function getTitleHistory() {
     return JSON.parse(await requestPromise(options))
 }
 
-module.exports = {getXboxProfile, getXboxGamercard, getXboxPresence, getTitleHistory}
+module.exports = {getXboxProfile, getXboxGamercard, getXboxPresence, getXboxTitleHistory}
