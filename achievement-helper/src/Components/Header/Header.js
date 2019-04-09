@@ -26,13 +26,6 @@ export class Header extends React.Component {
                         <span>Sam Greaves</span>
                         <div className="carousel-caption">Sam Greaves</div>
                     </div>
-                    <div class="xbox-slide">
-                        <div class="marginLeft">
-                            <img src={this.props.xboxGamercard.avatarBodyImagePath}/>
-                        </div>
-                        <Gamertag xboxProfile={this.props.xboxProfile}/>
-                        <div className="placeHolder">hello</div>
-                    </div>
                     <div class="steam-slide" >
                         <span>
                             <text>{this.props.steamProfile.personaname}</text>
