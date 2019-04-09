@@ -38,7 +38,7 @@ export class Header extends React.Component {
                             <text>{this.props.steamProfile.personaname}</text>
                         </span>
                     </div>
-                    <XboxProfileSlide/>
+                    <XboxProfileSlide xboxProfile={this.props.xboxProfile} xboxGamercard={this.props.xboxGamercard}/>
                 </Carousel>
 
 
