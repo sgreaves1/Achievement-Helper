@@ -1,0 +1,10 @@
+.xbox-last-played-box {
+    border: 5px solid gray;
+    background-color: black;
+    height: 100%;
+    padding: 5px;
+}
+
+.xbox-last-played-image {
+    height:100%;
+}

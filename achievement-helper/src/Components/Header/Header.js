@@ -3,7 +3,6 @@ import './Header.css'
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import Carousel from "react-bootstrap-carousel";
 import "bootstrap/dist/css/bootstrap.css";
-import {Gamertag} from "../Gamertag/Gamertag.js"
 import {XboxProfileSlide} from "../XboxProfileSlide/XboxProfileSlide";
 
 export class Header extends React.Component {
@@ -31,7 +30,7 @@ export class Header extends React.Component {
                             <text>{this.props.steamProfile.personaname}</text>
                         </span>
                     </div>
-                    <XboxProfileSlide xboxProfile={this.props.xboxProfile} xboxGamercard={this.props.xboxGamercard}/>
+                    <XboxProfileSlide xboxProfile={this.props.xboxProfile} xboxGamercard={this.props.xboxGamercard} xboxPresence={this.props.xboxPresence} xboxLastGamePlayed={this.props.xboxLastGamePlayed}/>
                 </Carousel>
 
 
