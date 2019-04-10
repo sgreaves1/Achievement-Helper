@@ -19,10 +19,10 @@ export class XboxProfileSlide extends React.Component {
                 <div class="xbox-slide-row-2">
                     <div class="xbox-slide-column-1"/>
                     <div class="xbox-slide-column-2">
-                        <LastPlayed xboxLastGamePlayed={this.props.xboxLastGamePlayed}/>
+                        <LastPlayed xboxTitleHistory={this.props.xboxTitleHistory}/>
                     </div>
                     <div class="xbox-slide-column-3">
-                        Last Played: {this.props.xboxLastGamePlayed.name}
+                        Last Played: {this.props.xboxTitleHistory.name}
                     </div>
                 </div>
                 <div class="xbox-slide-row-3">
