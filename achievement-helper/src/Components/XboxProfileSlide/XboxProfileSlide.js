@@ -22,7 +22,7 @@ export class XboxProfileSlide extends React.Component {
                         <LastPlayed xboxTitleHistory={this.props.xboxTitleHistory}/>
                     </div>
                     <div class="xbox-slide-column-3">
-                        Last Played: {this.props.xboxTitleHistory.name}
+                        Last Played: {this.props.xboxTitleHistory.titles[0].name}
                     </div>
                 </div>
                 <div class="xbox-slide-row-3">
