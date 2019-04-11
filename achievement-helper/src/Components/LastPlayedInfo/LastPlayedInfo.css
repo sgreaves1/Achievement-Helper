@@ -1,0 +1,41 @@
+.xbox-last-played-info-box {
+    height: 100%;
+}
+
+.xbox-last-played-info-row-1, .xbox-last-played-info-row-2, .xbox-last-played-info-row-3 {
+    text-align: left;
+}
+
+.xbox-last-played-info-row-1 {
+}
+
+.xbox-last-played-info-row-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.xbox-last-played-info-row-3 {
+    text-align: right;
+}
+
+.xbox-last-played-info-row-4 {
+}
+
+.xbox-last-played-info-col-1, .xbox-last-played-info-col-2 {
+    position: relative;
+    width: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.xbox-last-played-info-col-2 {
+    text-align: right;
+}
+
+.xbox-trophy {
+    height: 50%;
+}

@@ -6,7 +6,7 @@ export class LastPlayedImagesBox extends React.Component {
     render() {
         return(
             <div class="xbox-last-played-image-box">
-                <img class="xbox-last-played-image" src={this.props.xboxTitleHistory.titles[0].displayImage} />
+                <img class="xbox-last-played-image" src={this.props.LastPlayedGame.displayImage} />
             </div>
         )
     }
