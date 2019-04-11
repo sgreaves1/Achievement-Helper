@@ -11,15 +11,23 @@ class App extends Component {
             xboxGamercard: {},
             xboxPresence: {},
             xboxTitleHistory: {
-                "xuid": "",
+                "xuid": null,
                 "titles": [
                     {
-                        "displayImage": ""
+                        "displayImage": null,
+                        "achievement": {
+                            "currentAchievements": null,
+                            "totalAchievements": null,
+                            "currentGamerscore": null,
+                            "totalGamerscore": null,
+                            "progressPercentage": null,
+                            "sourceVersion": null
+                        },
                     }
                 ]
             },
             steamProfile: {
-                "personaname": ""
+                "personaname": null
             }
         };
     }
