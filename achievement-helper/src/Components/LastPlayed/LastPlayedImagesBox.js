@@ -1,11 +1,11 @@
 import React from "react";
-import './LastPlayed.css'
+import './LastPlayedImagesBox.css'
 
-export class LastPlayed extends React.Component {
+export class LastPlayedImagesBox extends React.Component {
 
     render() {
         return(
-            <div class="xbox-last-played-box">
+            <div class="xbox-last-played-image-box">
                 <img class="xbox-last-played-image" src={this.props.xboxTitleHistory.titles[0].displayImage} />
             </div>
         )

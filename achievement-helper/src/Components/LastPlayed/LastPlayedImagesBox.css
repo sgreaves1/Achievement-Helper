@@ -1,8 +1,7 @@
-.xbox-last-played-box {
+.xbox-last-played-image-box {
     border: 5px solid gray;
     background-color: black;
     height: 100%;
-    padding: 5px;
 }
 
 .xbox-last-played-image {

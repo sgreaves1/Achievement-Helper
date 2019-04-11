@@ -1,7 +1,7 @@
 import React from "react";
 import './XboxProfileSlide.css'
 import {Gamertag} from "../Gamertag/Gamertag.js"
-import {LastPlayed} from "../LastPlayed/LastPlayed.js"
+import {LastPlayedImagesBox} from "../LastPlayed/LastPlayedImagesBox.js"
 
 export class XboxProfileSlide extends React.Component {
     render() {
@@ -19,7 +19,7 @@ export class XboxProfileSlide extends React.Component {
                 <div class="xbox-slide-row-2">
                     <div class="xbox-slide-column-1"/>
                     <div class="xbox-slide-column-2">
-                        <LastPlayed xboxTitleHistory={this.props.xboxTitleHistory}/>
+                        <LastPlayedImagesBox xboxTitleHistory={this.props.xboxTitleHistory}/>
                     </div>
                     <div class="xbox-slide-column-3">
                         Last Played: {this.props.xboxTitleHistory.titles[0].name}
