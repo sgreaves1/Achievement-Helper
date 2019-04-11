@@ -25,7 +25,7 @@
     height: 37%;
 }
 
-.xbox-slide-column-1, .xbox-slide-column-2, .xbox-slide-column-3 {
+.xbox-slide-column-1, .xbox-slide-column-2, .xbox-slide-column-3, .xbox-slide-column-bottom {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -51,4 +51,7 @@
 }
 
 .xbox-slide-column-3 {
+}
+
+.xbox-slide-column-bottom {
 }

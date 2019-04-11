@@ -30,7 +30,7 @@ export class Header extends React.Component {
                             <text>{this.props.steamProfile.personaname}</text>
                         </span>
                     </div>
-                    <XboxProfileSlide xboxProfile={this.props.xboxProfile} xboxGamercard={this.props.xboxGamercard} xboxPresence={this.props.xboxPresence} LastPlayedGame={this.props.xboxTitleHistory.titles[0]}/>
+                    <XboxProfileSlide xboxProfile={this.props.xboxProfile} xboxGamercard={this.props.xboxGamercard} xboxPresence={this.props.xboxPresence} LastPlayedGames={this.props.xboxTitleHistory.titles}/>
                 </Carousel>
 
 

@@ -3,6 +3,7 @@ import './XboxProfileSlide.css'
 import {Gamertag} from "../Gamertag/Gamertag.js"
 import {LastPlayedImagesBox} from "../LastPlayedImageBox/LastPlayedImagesBox.js"
 import {LastPlayedInfo} from "../LastPlayedInfo/LastPlayedInfo";
+import {LastPlayedList} from "../LastPlayedList/LastPlayedList";
 
 export class XboxProfileSlide extends React.Component {
     render() {
@@ -20,16 +21,17 @@ export class XboxProfileSlide extends React.Component {
                 <div class="xbox-slide-row-2">
                     <div class="xbox-slide-column-1"/>
                     <div class="xbox-slide-column-2">
-                        <LastPlayedImagesBox LastPlayedGame={this.props.LastPlayedGame}/>
+                        <LastPlayedImagesBox LastPlayedGame={this.props.LastPlayedGames[0]}/>
                     </div>
                     <div class="xbox-slide-column-3">
-                        <LastPlayedInfo LastPlayedGame={this.props.LastPlayedGame}/>
+                        <LastPlayedInfo LastPlayedGame={this.props.LastPlayedGames[0]}/>
                     </div>
                 </div>
                 <div class="xbox-slide-row-3">
                     <div class="xbox-slide-column-1"/>
-                    <div class="xbox-slide-column-2"/>
-                    <div class="xbox-slide-column-3"/>
+                    <div class="xbox-slide-column-bottom">
+                        <LastPlayedList LastPlayedGames={this.props.LastPlayedGames}/>
+                    </div>
                 </div>
             </div>
         )

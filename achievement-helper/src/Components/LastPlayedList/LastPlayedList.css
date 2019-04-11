@@ -1,0 +1,12 @@
+.xbox-last-played-list-game-box {
+
+    float:left;
+    background-color: black;
+    margin-top: 10px;
+    margin-left: 11px;
+    height: 12vh;
+}
+
+.xbox-last-played-list-game-image {
+    height: 100%;
+}
