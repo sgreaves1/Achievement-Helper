@@ -23,6 +23,14 @@ class App extends Component {
                             "progressPercentage": null,
                             "sourceVersion": null
                         },
+                        "images": [
+                            {
+                                "url": "cs",
+                                "type": null
+                            }
+                        ]
+
+
                     }
                 ]
             },

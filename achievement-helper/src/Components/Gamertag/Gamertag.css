@@ -1,6 +1,5 @@
 .xbox-gamercard {
     color: white;
-    border: 1px solid red;
     height: 100%;
     padding-left: 20px;
     padding-right: 40px;
@@ -21,7 +20,6 @@
 .xbox-gamercard-column-1, .xbox-gamercard-column-2 {
     position: relative;
     width: 100%;
-    border: 1px solid green;
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;

@@ -7,8 +7,16 @@ import {LastPlayedList} from "../LastPlayedList/LastPlayedList";
 
 export class XboxProfileSlide extends React.Component {
     render() {
+
+        let count = this.props.LastPlayedGames[0].images.length;
+        let rand = Math.floor((Math.random() * this.props.LastPlayedGames[0].images.length));
+
+        var backgroundStyle = {
+            backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${this.props.LastPlayedGames[0].images[rand].url})`,
+        };
+
         return(
-            <div class="xbox-slide2 container-fluid">
+            <div class="xbox-slide2 container-fluid" style={backgroundStyle}>
                 <div class="xbox-slide-row-1">
                     <div class="xbox-slide-column-1">
                         <img src={this.props.xboxGamercard.avatarBodyImagePath} />
