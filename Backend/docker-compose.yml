@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  achievement-helper-backend:
+    image: node:dubnium-alpine
+    volumes:
+    - ./:/app
+    working_dir: /app
+    command: ["npm", "start"]
+    ports:
+    - 4420:4420
+    networks:
+    - achievement-helper
+networks:
+  achievement-helper:
+    driver: bridge
