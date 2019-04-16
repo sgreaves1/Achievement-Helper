@@ -16,7 +16,7 @@ router.get('/presence', async function (request, response) {
 });
 
 router.get('/title-history', async function (request, response) {
-    response.status(HttpStatus['OK']).json(await xbox.API.getXboxTitleHistory());
+    response.status(HttpStatus['OK']).json(await xboxAPI.getXboxTitleHistory());
 });
 
 module.exports = router;

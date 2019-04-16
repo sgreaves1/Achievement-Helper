@@ -4,7 +4,7 @@ let bodyParser = require('body-parser');
 let app = express();
 let lodash = require('lodash');
 
-let port = process.env.PORT || 4400;
+let port = process.env.PORT || 4420;
 
 // Routes
 const indexRoute = require('./routes/index');
