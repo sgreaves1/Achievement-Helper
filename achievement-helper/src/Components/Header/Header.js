@@ -3,7 +3,7 @@ import './Header.css'
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import Carousel from "react-bootstrap-carousel";
 import "bootstrap/dist/css/bootstrap.css";
-import {XboxProfileSlide} from "../Xbox/XboxProfileSlide/XboxProfileSlide";
+import {XboxProfileSlide} from "./Xbox/XboxProfileSlide/XboxProfileSlide";
 
 export class Header extends React.Component {
     _changeIcon = () => {
