@@ -7,6 +7,8 @@ services:
     - ./:/app
     working_dir: /app
     command: ["npm", "start"]
+    environment:
+      XBOX_KEY: "xxxx"
     ports:
     - 4420:4420
     networks:

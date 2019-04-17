@@ -11,6 +11,18 @@ const indexRoute = require('./routes/index');
 const xboxRoute = require('./routes/xbox');
 const steamRoute = require('./routes/steam');
 
+nconf.argv({
+    'XBOX_KEY': {
+        alias: 'xbox-key',
+        describe: 'Key for Xbox API',
+        demand: false
+    }
+})
+    .env()
+    .defaults({
+        'XBOX_KEY': 'xxxx'
+    });
+
 app.use(express.static(__dirname));
 
 app.use(bodyParser.urlencoded({extended: true}));

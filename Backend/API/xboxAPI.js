@@ -1,7 +1,7 @@
 const requestPromise = require('request-promise');
 
 let xboxUid = 'xxxx';
-let auth = 'xxxx';
+let auth = nconf.get('XBOX_KEY');
 
 let url = 'https://xboxapi.com/v2/';
 let getProfiles = '/profile';
