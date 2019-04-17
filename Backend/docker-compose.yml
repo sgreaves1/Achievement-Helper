@@ -9,6 +9,9 @@ services:
     command: ["npm", "start"]
     environment:
       XBOX_KEY: "xxxx"
+      STEAM_KEY: "xxxx"
+      HALO5_KEY: "xxxx"
+      LOL_KEY: "xxxx"
     ports:
     - 4420:4420
     networks:
