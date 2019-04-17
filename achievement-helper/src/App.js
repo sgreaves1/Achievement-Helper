@@ -103,7 +103,7 @@ class App extends Component {
       return (
           <div className="App">
             <Header xboxProfile={this.state.xboxProfile} xboxGamercard={this.state.xboxGamercard} xboxPresence={this.state.xboxPresence} xboxTitleHistory={this.state.xboxTitleHistory} steamProfile={this.state.steamProfile}/>
-            <Content xboxTitleHistory={this.state.xboxTitleHistory}/>
+            <Content xboxProfile={this.state.xboxProfile} xboxTitleHistory={this.state.xboxTitleHistory}/>
           </div>
       );
     }
