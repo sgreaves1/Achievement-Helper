@@ -1,6 +1,7 @@
 const requestPromise = require('request-promise');
+const nconf = require('nconf');
 
-let key = 'xxxx';
+let key = nconf.get('STEAM_KEY');
 let steamId = 'xxxx';
 
 let url = 'http://api.steampowered.com/';

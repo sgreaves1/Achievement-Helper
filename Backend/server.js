@@ -16,11 +16,17 @@ nconf.argv({
         alias: 'xbox-key',
         describe: 'Key for Xbox API',
         demand: false
+    },
+    'STEAM_KEY': {
+        alias: 'steam-key',
+        describe: 'Key for Steam API',
+        demand: false
     }
 })
     .env()
     .defaults({
-        'XBOX_KEY': 'xxxx'
+        'XBOX_KEY': 'xxxx',
+        'STEAM_KEY': 'xxxx'
     });
 
 app.use(express.static(__dirname));

@@ -1,4 +1,5 @@
 const requestPromise = require('request-promise');
+const nconf = require('nconf');
 
 let xboxUid = 'xxxx';
 let auth = nconf.get('XBOX_KEY');
