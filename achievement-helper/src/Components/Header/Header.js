@@ -6,12 +6,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import {XboxProfileSlide} from "./Xbox/XboxProfileSlide/XboxProfileSlide";
 
 export class Header extends React.Component {
-    _changeIcon = () => {
-        let { leftIcon, rightIcon } = this.state;
-        leftIcon = leftIcon ? undefined : <span className="fa fa-glass" />;
-        rightIcon = rightIcon ? undefined : <span className="fa fa-music" />;
-        this.setState({ leftIcon, rightIcon });
-    };
 
     render() {
         return(

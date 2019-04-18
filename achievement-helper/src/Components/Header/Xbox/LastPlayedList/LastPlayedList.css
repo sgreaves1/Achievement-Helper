@@ -1,12 +1,16 @@
 .xbox-last-played-list-game-box {
-
     float:left;
-    background-color: black;
     margin-top: 10px;
     margin-left: 11px;
     height: 12vh;
+    background-repeat: no-repeat;
 }
 
 .xbox-last-played-list-game-image {
     height: 100%;
+    z-index: 2;
+}
+
+.xbox-last-played-list-game-image:hover {
+    opacity: 0.2;
 }

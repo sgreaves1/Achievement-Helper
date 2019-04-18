@@ -6,13 +6,45 @@ import {LastPlayedInfo} from "../LastPlayedInfo/LastPlayedInfo";
 import {LastPlayedList} from "../LastPlayedList/LastPlayedList";
 
 export class XboxProfileSlide extends React.Component {
+    constructor(props) {
+        super(props);
+        this.showHoveredGame  = this.showHoveredGame.bind(this);
+
+        this.state = {
+            xboxLastPlayedGame: {
+                "displayImage": null,
+                "achievement": {
+                    "currentAchievements": null,
+                    "totalAchievements": null,
+                    "currentGamerscore": null,
+                    "totalGamerscore": null,
+                    "progressPercentage": null,
+                    "sourceVersion": null
+                },
+                "images": [
+                    {
+                        "url": null,
+                        "type": null
+                    }
+                ]
+            }
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({xboxLastPlayedGame: nextProps.LastPlayedGames[0]});
+    }
+
+    showHoveredGame(gameToShow) {
+        this.setState({xboxLastPlayedGame: gameToShow});
+    }
+
     render() {
 
-        let count = this.props.LastPlayedGames[0].images.length;
-        let rand = Math.floor((Math.random() * this.props.LastPlayedGames[0].images.length));
+        let rand = Math.floor((Math.random() * this.state.xboxLastPlayedGame.images.length));
 
         var backgroundStyle = {
-            backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${this.props.LastPlayedGames[0].images[rand].url})`,
+            backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${this.state.xboxLastPlayedGame.images[rand].url})`,
         };
 
         return(
@@ -29,16 +61,16 @@ export class XboxProfileSlide extends React.Component {
                 <div class="xbox-slide-row-2">
                     <div class="xbox-slide-column-1"/>
                     <div class="xbox-slide-column-2">
-                        <LastPlayedImagesBox LastPlayedGame={this.props.LastPlayedGames[0]}/>
+                        <LastPlayedImagesBox LastPlayedGame={this.state.xboxLastPlayedGame}/>
                     </div>
                     <div class="xbox-slide-column-3">
-                        <LastPlayedInfo LastPlayedGame={this.props.LastPlayedGames[0]}/>
+                        <LastPlayedInfo LastPlayedGame={this.state.xboxLastPlayedGame}/>
                     </div>
                 </div>
                 <div class="xbox-slide-row-3">
                     <div class="xbox-slide-column-1"/>
                     <div class="xbox-slide-column-bottom">
-                        <LastPlayedList LastPlayedGames={this.props.LastPlayedGames}/>
+                        <LastPlayedList LastPlayedGames={this.props.LastPlayedGames} showHoveredGame={this.showHoveredGame}/>
                     </div>
                 </div>
             </div>
