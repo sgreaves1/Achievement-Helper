@@ -16,18 +16,22 @@ export class Content extends React.Component {
 
     }
 
+    profileClicked = (event, profile) =>  {
+        console.log(profile);
+    };
+
     render() {
         return(
             <div class="profile-summary-list">
                 <div className="container-fluid">
                     <div className="row">
                         <div class="col-1 profile-card">
-                            <button class="profile-button">
+                            <button class="profile-button" onClick={(e) => this.profileClicked(e, "Xbox")}>
                             <ProfileCard Title="Xbox" Gamertag={this.props.xboxProfile.Gamertag} CurrentGamerscore={this.props.xboxProfile.Gamerscore} TotalGamerscore={this.getTotalXboxGamerScore()}/>
                             </button>
                         </div>
                         <div class="col-1 profile-card">
-                            <button className="profile-button">
+                            <button className="profile-button" onClick={(e) => this.profileClicked(e, "Steam")}>
                             <ProfileCard Title="Steam" Gamertag="Sam" CurrentGamerscore="281" TotalGamerscore="1000"/>
                             </button>
                         </div>
