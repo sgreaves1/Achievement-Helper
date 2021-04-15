@@ -1,6 +1,12 @@
 .profile-card {
+    border-radius: 25px;
+    margin-left: 10px;
+}
+
+.profile-button {
     border: 1px solid white;
     border-radius: 25px;
-    margin: 10px;
+    background-color: black;
+    color: white;
     padding: 10px;
 }

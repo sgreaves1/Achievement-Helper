@@ -17,18 +17,19 @@ export class Content extends React.Component {
     }
 
     render() {
-
-
-
         return(
             <div class="profile-summary-list">
                 <div className="container-fluid">
                     <div className="row">
                         <div class="col-1 profile-card">
+                            <button class="profile-button">
                             <ProfileCard Title="Xbox" Gamertag={this.props.xboxProfile.Gamertag} CurrentGamerscore={this.props.xboxProfile.Gamerscore} TotalGamerscore={this.getTotalXboxGamerScore()}/>
+                            </button>
                         </div>
                         <div class="col-1 profile-card">
+                            <button className="profile-button">
                             <ProfileCard Title="Steam" Gamertag="Sam" CurrentGamerscore="281" TotalGamerscore="1000"/>
+                            </button>
                         </div>
 
                         <div class="col-1">
