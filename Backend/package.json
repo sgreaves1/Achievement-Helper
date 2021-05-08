@@ -17,7 +17,7 @@
     "cucumber-pretty": "^1.5.0",
     "express": "^4.16.4",
     "literal-http-status": "^1.0.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "mongodb": "^3.2.2",
     "morgan": "^1.9.1",
     "nconf": "^0.10.0",
